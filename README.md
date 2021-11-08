@@ -26,3 +26,4 @@ To build the tool:
 ```
 > node index.js
 ```
+https://github.com/cssam/irdetoi-flipsort/issues/1
