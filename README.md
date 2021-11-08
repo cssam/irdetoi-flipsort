@@ -12,19 +12,76 @@ Download and install Node.js from https://nodejs.org
 
 Clone the project into your local folder from https://github.com/cssam/irdetoi-flipsort
 
+## Code Desciption
+
+# User Interface
+
+Interfactive user interface developed in `userInteract.js`. Features implemented by using `inquirer` and `minimis` libraries.
+
+```const questions = [
+      {
+        name: "numbers",
+        type: "input",
+        message:
+          "Enter list of comma seperated Integers. Maximum 100 numbers.\nEach number should be 1 <= arr[i] <= arr.length.\nNo spaces (as example; 3,5,4,2,1):",
+        validate: function (value) {
+```
+
+```
+validate: function (value) {
+          if (value.length && Number(value) < l + 1) {
+            return true;
+          } else {
+            return "Please enter k value where 1 <= k <= arr.length .";
+          }
+        },
+```
+
+# Input Validation
+
+Checking for only numbers by RegEx
+
+```
+    let regex = /^(?!,)(,?[0-9]+)+$/;
+    if (!regex.test(value)) {
+    return "Array contains non numeric values. Please correct them. No spaces.";
+    }
+```
+
+Checking for duplicate values
+
+```
+    let duplicateCheck = inputArr.some((element, index) => {
+    return inputArr.indexOf(element) !== index;
+    });
+```
+
+Checking for any value grether than the length
+
+```
+    let l = inputArr.length;
+    let overMaxCheck = inputArr.some((element) => {
+    return element > l;
+    });
+```
+
 #### build the project
 
 To build the tool:
 
-```
+````
+
 > cd $irdetoi-flipsort
 > npm update
+
 ```
 
 ### Running the tool
 
 ```
+
 > node index.js
+
 ```
 
 ### Success Senario
@@ -44,7 +101,8 @@ Step 4: Repeat giving k value 4 then 3
 Step 5: Your Results
 ![flipSort-step5](https://user-images.githubusercontent.com/6191308/140783492-66519c3e-3e2b-4fc7-aa79-e53996357ad9.png)
 
-
 ### Fail Senario
 
 ![flipSort- failed](https://user-images.githubusercontent.com/6191308/140784365-d6677549-dc46-485c-bf89-f4ea9f79538b.png)
+```
+````
