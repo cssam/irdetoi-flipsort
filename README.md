@@ -81,30 +81,30 @@ Showing the results code implemented in `\lib\printCLI.js`. Used `clui` and `cli
 
 ### Flip Sort Algorithm
 
-Algorithm implemented in `\lib\flipSort.js`.
+Algorithm implemented in ```\lib\flipSort.js```.
 Get the part of the array
-`flipPart = inputArr.slice(0, k);`
+```flipPart = inputArr.slice(0, k);```
 
 Flip the part
-`resultArr = flipPart.reverse();`
+```resultArr = flipPart.reverse();```
 
 Join the parts
-`resultArr = resultArr.concat(nonFlipPart);`
+```resultArr = resultArr.concat(nonFlipPart);```
 
 ### Controller
 
-Controller of the application implemented in `index.js`.
+Controller of the application implemented in ```index.js```.
 
-Banner uses `figlet` and `chalk`
+Banner uses ```figlet``` and ```chalk```
 
 ```chalk.yellow(
     figlet.textSync("IRDETOI - Flip Sort", { horizontalLayout: "full" })
   )
 ```
 
-App entry point is `run` function. Then keep calling `continueFlip` async function until maximum attemts reached.
+App entry point is ```run``` function. Then keep calling ```continueFlip``` async function until maximum attemts reached.
 
-### build the project
+### **Build the project**
 
 To build the tool:
 
@@ -152,6 +152,3 @@ Step 5: Your Results
 
 ![flipSort- failed](https://user-images.githubusercontent.com/6191308/140784365-d6677549-dc46-485c-bf89-f4ea9f79538b.png)
 
-```
-
-```
