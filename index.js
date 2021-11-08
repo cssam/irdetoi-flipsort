@@ -91,17 +91,6 @@ const continueFlip = async (toFlip) => {
     }
     printResult("Failed. Maximum attempts exceeded");
   }
-
-  // const answerContinue = await userInteract.askContinue();
-  // if (debugOn) {
-  //   console.log("answerContinue: ", answerContinue);
-  // }
-  // if (answerContinue.Continue == true) {
-  //   inputArr = flippedArr;
-  //   continueFlip();
-  // } else {
-  //   printResult();
-  // }
 };
 
 const printResult = async (final) => {

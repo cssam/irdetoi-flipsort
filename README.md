@@ -1,4 +1,4 @@
-Flip Sort CLI
+## Flip Sort CLI
 
 # **A NodeS project to play Flip Sort**
 
@@ -12,11 +12,11 @@ Download and install Node.js from https://nodejs.org
 
 Clone the project into your local folder from https://github.com/cssam/irdetoi-flipsort
 
-## Code Desciption
+## **Code Description**
 
-# User Interface
+### User Interface
 
-Interfactive user interface developed in `userInteract.js`. Features implemented by using `inquirer` and `minimis` libraries.
+Interfactive user interface developed in `\lib\userInteract.js`. Features implemented by using `inquirer` and `minimis` libraries.
 
 ```const questions = [
       {
@@ -37,7 +37,7 @@ validate: function (value) {
         },
 ```
 
-# Input Validation
+### Input Validation
 
 Checking for only numbers by RegEx
 
@@ -65,23 +65,70 @@ Checking for any value grether than the length
     });
 ```
 
-#### build the project
+### Result Output visualization
+
+Showing the results code implemented in `\lib\printCLI.js`. Used `clui` and `cli-color` libraries.
+
+```
+    let header = new Line(outputBuffer)
+        .column("Attempt", 20, [clc.cyan, clc.bold])
+        .column("Input Array", 20, [clc.cyan, clc.bold])
+        .column("Flipped Array", 20, [clc.cyan, clc.bold])
+        .column("K value", 11, [clc.cyan, clc.bold])
+        .fill()
+        .store();
+```
+
+### Flip Sort Algorithm
+
+Algorithm implemented in `\lib\flipSort.js`.
+Get the part of the array
+`flipPart = inputArr.slice(0, k);`
+
+Flip the part
+`resultArr = flipPart.reverse();`
+
+Join the parts
+`resultArr = resultArr.concat(nonFlipPart);`
+
+### Controller
+
+Controller of the application implemented in `index.js`.
+
+Banner uses `figlet` and `chalk`
+
+```chalk.yellow(
+    figlet.textSync("IRDETOI - Flip Sort", { horizontalLayout: "full" })
+  )
+```
+
+App entry point is `run` function. Then keep calling `continueFlip` async function until maximum attemts reached.
+
+### build the project
 
 To build the tool:
 
-````
-
+```
 > cd $irdetoi-flipsort
 > npm update
-
 ```
 
 ### Running the tool
 
 ```
-
 > node index.js
+```
 
+### Running the app in debug mode
+
+```
+> node index.js -d
+```
+
+or
+
+```
+> node index.js -debug
 ```
 
 ### Success Senario
@@ -104,5 +151,7 @@ Step 5: Your Results
 ### Fail Senario
 
 ![flipSort- failed](https://user-images.githubusercontent.com/6191308/140784365-d6677549-dc46-485c-bf89-f4ea9f79538b.png)
+
 ```
-````
+
+```
