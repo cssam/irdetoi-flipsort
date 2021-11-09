@@ -36,6 +36,8 @@ validate: function (value) {
           }
         },
 ```
+![k validation](https://user-images.githubusercontent.com/6191308/140938564-9e51816f-880c-43cb-98e5-4d66cae3845b.png)
+
 
 ### Input Validation
 
@@ -47,6 +49,7 @@ Checking for only numbers by RegEx
     return "Array contains non numeric values. Please correct them. No spaces.";
     }
 ```
+![validation for non number](https://user-images.githubusercontent.com/6191308/140938632-fd8aed72-7543-49ba-9bf4-9d6c23f5fbf2.png)
 
 Checking for duplicate values
 
@@ -55,6 +58,7 @@ Checking for duplicate values
     return inputArr.indexOf(element) !== index;
     });
 ```
+![duplicate number check](https://user-images.githubusercontent.com/6191308/140938963-5c8ed770-1fcf-48d9-8e8a-cba04cb29ca8.png)
 
 Checking for any value grether than the length
 
@@ -64,6 +68,7 @@ Checking for any value grether than the length
     return element > l;
     });
 ```
+![max value validation](https://user-images.githubusercontent.com/6191308/140938688-41c65e7b-0643-4068-a0da-315be62b4825.png)
 
 ### Result Output visualization
 
