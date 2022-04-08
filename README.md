@@ -1,6 +1,6 @@
 ## Flip Sort CLI
 
-# **A NodeS project to play Flip Sort**
+# **A NodeJS CLI project to play Flip Sort**
 
 ## **Project Setup Guide**
 
@@ -10,7 +10,7 @@ Download and install Node.js from https://nodejs.org
 
 ### Clone the irdetoi-flipsort project
 
-Clone the project into your local folder from https://github.com/cssam/irdetoi-flipsort
+Clone the project into your local folder from https://github.com/cssamLabs/Lab-CLI-Algorithm-FlipSort
 
 ## **Code Description**
 
