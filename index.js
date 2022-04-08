@@ -43,6 +43,8 @@ const run = async () => {
   maxAtt = 10 * l;
   sortedArray = inputArr.slice(0);
   sortedArray.sort();
+  //let inputArrAuto = inputArr.slice(0);
+  //flipSort.autoFlipSort(inputArrAuto, debugOn);
   if (checkAnswer(inputArr)) {
     console.log("array is sorted");
   } else {
@@ -93,6 +95,10 @@ const continueFlip = async (toFlip) => {
   }
 };
 
+/**
+ * Print final result
+ * @param {*} final
+ */
 const printResult = async (final) => {
   let endResult = new Object();
   endResult.startState = inputArr.toString();
@@ -105,6 +111,13 @@ const printResult = async (final) => {
   printCLI.print(endResult, final);
 };
 
+/**
+ * Result Object
+ * @param {*} attempt
+ * @param {*} inArr
+ * @param {*} k
+ * @param {*} flippedArr
+ */
 function FlipResult(attempt, inArr, k, flippedArr) {
   this.attempt = attempt;
   this.inArr = inArr;
@@ -112,6 +125,11 @@ function FlipResult(attempt, inArr, k, flippedArr) {
   this.flippedArr = flippedArr;
 }
 
+/**
+ * check the array for correct answer
+ * @param {*} flippedArr
+ * @returns boolean
+ */
 function checkAnswer(flippedArr) {
   if (debugOn) {
     console.log("inputArr: ", inputArr);
