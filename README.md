@@ -1,4 +1,4 @@
-## Flip Sort CLI
+## NodeJs Command line Interface with Flip Sort Algorithm
 
 # **A NodeJS CLI project to play Flip Sort**
 
