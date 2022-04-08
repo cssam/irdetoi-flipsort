@@ -1,6 +1,6 @@
 ## Flip Sort CLI
 
-# **A NodeS project to play Flip Sort**
+# **A NodeJS CLI project to play Flip Sort**
 
 ## **Project Requirement**
 
@@ -60,7 +60,7 @@ Download and install Node.js from https://nodejs.org
 
 ### Clone the irdetoi-flipsort project
 
-Clone the project into your local folder from https://github.com/cssam/irdetoi-flipsort
+Clone the project into your local folder from https://github.com/cssamLabs/Lab-CLI-Algorithm-FlipSort
 
 ## **Code Description**
 
@@ -86,6 +86,8 @@ validate: function (value) {
           }
         },
 ```
+![k validation](https://user-images.githubusercontent.com/6191308/140938564-9e51816f-880c-43cb-98e5-4d66cae3845b.png)
+
 
 ### Input Validation
 
@@ -97,6 +99,7 @@ Checking for only numbers by RegEx
     return "Array contains non numeric values. Please correct them. No spaces.";
     }
 ```
+![validation for non number](https://user-images.githubusercontent.com/6191308/140938632-fd8aed72-7543-49ba-9bf4-9d6c23f5fbf2.png)
 
 Checking for duplicate values
 
@@ -105,6 +108,7 @@ Checking for duplicate values
     return inputArr.indexOf(element) !== index;
     });
 ```
+![duplicate number check](https://user-images.githubusercontent.com/6191308/140938963-5c8ed770-1fcf-48d9-8e8a-cba04cb29ca8.png)
 
 Checking for any value grether than the length
 
@@ -114,6 +118,7 @@ Checking for any value grether than the length
     return element > l;
     });
 ```
+![max value validation](https://user-images.githubusercontent.com/6191308/140938688-41c65e7b-0643-4068-a0da-315be62b4825.png)
 
 ### Result Output visualization
 
@@ -131,30 +136,30 @@ Showing the results code implemented in `\lib\printCLI.js`. Used `clui` and `cli
 
 ### Flip Sort Algorithm
 
-Algorithm implemented in `\lib\flipSort.js`.
+Algorithm implemented in ```\lib\flipSort.js```.
 Get the part of the array
-`flipPart = inputArr.slice(0, k);`
+```flipPart = inputArr.slice(0, k);```
 
 Flip the part
-`resultArr = flipPart.reverse();`
+```resultArr = flipPart.reverse();```
 
 Join the parts
-`resultArr = resultArr.concat(nonFlipPart);`
+```resultArr = resultArr.concat(nonFlipPart);```
 
 ### Controller
 
-Controller of the application implemented in `index.js`.
+Controller of the application implemented in ```index.js```.
 
-Banner uses `figlet` and `chalk`
+Banner uses ```figlet``` and ```chalk```
 
 ```chalk.yellow(
     figlet.textSync("IRDETOI - Flip Sort", { horizontalLayout: "full" })
   )
 ```
 
-App entry point is `run` function. Then keep calling `continueFlip` async function until maximum attemts reached.
+App entry point is ```run``` function. Then keep calling ```continueFlip``` async function until maximum attemts reached.
 
-### build the project
+### **Build the project**
 
 To build the tool:
 
@@ -202,6 +207,3 @@ Step 5: Your Results
 
 ![flipSort- failed](https://user-images.githubusercontent.com/6191308/140784365-d6677549-dc46-485c-bf89-f4ea9f79538b.png)
 
-```
-
-```
