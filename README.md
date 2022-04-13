@@ -58,7 +58,7 @@ var flipSort = function (arr) {};
 
 Download and install Node.js from https://nodejs.org
 
-### Clone the irdetoi-flipsort project
+### Clone the Flipsort project
 
 Clone the project into your local folder from https://github.com/cssamLabs/Lab-CLI-Algorithm-FlipSort
 
